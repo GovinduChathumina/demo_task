@@ -15,7 +15,7 @@ return new class extends Migration
             $table->id();
             $table->string('title');
             $table->text('description');
-            $table->enum('status', ['completed', 'uncompleted'])->default('uncompleted');
+            $table->enum('status', ['Open', 'Pending', 'In-progress', 'In-review', 'Accepted', 'Rejected'])->default('Open');
             $table->date('due_date');
             $table->timestamps();
             $table->softDeletes();

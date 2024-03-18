@@ -59,7 +59,6 @@ class TaskAPIController extends Controller
         $rules = [
             'title' => $isRequired ? 'required|string' : 'string',
             'description' => $isRequired ? 'required|string' : 'string',
-            'status' => $isRequired ? 'required|in:completed,uncompleted' : 'in:completed,uncompleted',
             'due_date' => $isRequired ? 'required|date' : 'date',
         ];
 
